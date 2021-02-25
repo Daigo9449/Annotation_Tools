@@ -2,3 +2,11 @@ Formato kitti
   1       2        3        4    5   6    7     8     9   10   11   12   13   14   15   16*
 Class Truncated Occludded Alpha Top Left Down Right 3DD1 3DD2 3DD3 3DL1 3DL2 3DL3 Rot Score
 Person    0.00	   0	  0.00   t    l    d    r   0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+
+YOLO format
+Takes into account the labels.txt and have to be normalized
+For example
+(Line 0) Person
+(Line 1) Handgun
+Class <x_center>  <y_center>  <width>  <height>
+  0    0.716797   0.395833  0.216406 0.147222      Person Class

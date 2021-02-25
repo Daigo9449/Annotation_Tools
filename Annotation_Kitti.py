@@ -8,12 +8,14 @@ Created on Wed Feb 24 13:41:46 2021
 import os
 from tqdm import tqdm
 
-directory = "Dataset\labels" #Directory where images and labels are saved
+#directory = "Dataset\labels" #Directory where labels are saved
+
+directory = "annotation" #Directory where labels are saved
 dest = "labels_kitti" #Directory where txt files in KITTI format will be stored
 
 ########################################### KITTI FORMAT ############################################
-# Class Truncated Occludded Alpha Top Left Down Right 3DD1 3DD2 3DD3 3DL1 3DL2 3DL3 Rot Score
-# Person    0.00	   0	  0.00   t    l    d    r   0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+# Class Truncated Occludded Alpha Left Top Right Bottom 3DD1 3DD2 3DD3 3DL1 3DL2 3DL3 Rot Score
+# Person    0.00	   0	  0.00   l    t    r    b   0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
 #####################################################################################################
 
 tags = {
@@ -21,10 +23,10 @@ tags = {
   "Trunc": "0.00",
   "Occl": "0",
   "Alpha": "0.00",
-  "Top": "0.00",
   "Left": "0.00",
-  "Down": "0.00",
-  "Right": "0.00", 
+  "Top": "0.00",
+  "Right": "0.00",
+  "Bottom": "0.00", 
   "3DD1": "0.00",
   "3DD2": "0.00",
   "3DD3": "0.00",
