@@ -10,8 +10,12 @@ from tqdm import tqdm
 
 #directory = "Dataset\labels" #Directory where labels are saved
 
-directory = "annotation" #Directory where labels are saved
-dest = "labels_kitti" #Directory where txt files in KITTI format will be stored
+#directory = "annotation" #Directory where labels are saved
+#dest = "labels_kitti" #Directory where txt files in KITTI format will be stored
+
+
+directory = "G:/Introid/Jomar_Dataset/test_files" #Directory where labels are saved
+dest = "G:/Introid/Jomar_Dataset/test_files/kitti_anno" #Directory where txt files in KITTI format will be stored
 
 ########################################### KITTI FORMAT ############################################
 # Class Truncated Occludded Alpha Left Top Right Bottom 3DD1 3DD2 3DD3 3DL1 3DL2 3DL3 Rot Score

@@ -7,6 +7,7 @@ Created on Wed Feb 24 17:20:07 2021
 
 import cv2 
 import os
+import shutil
 from tqdm import tqdm
 from glob import glob
 from math import floor
@@ -17,10 +18,14 @@ import numpy as np
 directory = "Vis_Demo" #Directory where images and labels are saved
 directory = "annotation"
 
-#elements = os.listdir(directory)
-#files = glob("Vis_demo/*.txt")
-txt = glob("annotation/*.txt")
-images = glob("annotation/*.png")
+#txt = glob("annotation/*.txt")
+#images = glob("annotation/*.png")
+
+txt = glob("G:/Jomar_Dataset/annotation/*.txt")
+images = glob("G:/Jomar_Dataset/annotation/*.png")
+
+txt =glob("D:/Usuarios/diego/Documentos/GitHub/Annotation_Tools/Data_Augmentation/*.txt")
+images =glob ("D:/Usuarios/diego/Documentos/GitHub/Annotation_Tools/Data_Augmentation/*.png")
 
 # Blue color in BGR 
 color = (255, 0, 0) 
@@ -49,7 +54,8 @@ for image_dir, bb_dir in tqdm(zip(images, txt)):
             # Draw a rectangle with blue line borders of thickness of 2 px 
             image = cv2.rectangle(image, start_point, end_point, color, thickness) 
             #image = cv2.rectangle(image, (107, 4), (761, 764), color, thickness) 
-            cv2.imshow("image", image)
+            cv2.imshow(image_dir, image)
+        bb.close()
     
         cv2.waitKey(0)
         cv2.destroyAllWindows()
